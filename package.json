@@ -1,0 +1,35 @@
+{
+  "name": "ts-face-swap",
+  "version": "1.0.0",
+  "description": "Face swap CLI project in TypeScript",
+  "main": "dist/face-swap.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "preswap": "npm run build",
+    "swap": "node dist/face-swap.js",
+    "predownload-models": "npm run build",
+    "download-models": "node dist/download-models.js",
+    "deep:setup": "powershell -ExecutionPolicy Bypass -File ./scripts/deep_setup.ps1",
+    "deep:swap": "powershell -ExecutionPolicy Bypass -File ./scripts/deep_swap.ps1"
+  },
+  "keywords": [
+    "typescript",
+    "face-swap",
+    "face-api"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-wasm": "^4.22.0",
+    "@vladmandic/face-api": "^1.7.15",
+    "canvas": "^3.1.0",
+    "commander": "^12.1.0",
+    "delaunator": "^5.0.1",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/delaunator": "^5.0.0",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2"
+  }
+}
