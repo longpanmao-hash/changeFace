@@ -1,0 +1,6 @@
+insightface==0.7.3
+onnxruntime==1.24.2
+opencv-python==4.12.0.88
+numpy==2.2.6
+rembg==2.0.67
+mediapipe==0.10.14
